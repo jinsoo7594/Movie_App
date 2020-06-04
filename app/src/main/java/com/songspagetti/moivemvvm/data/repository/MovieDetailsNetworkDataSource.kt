@@ -16,9 +16,9 @@ class MovieDetailsNetworkDataSource (private val apiService : TheMovieDBInterfac
     //undercore means it is private
     private val _networkState = MutableLiveData<NetworkState>()
     val networkState: LiveData<NetworkState>
-        get() = _networkState // with Get(), no need to implement get function to get networkState
-    // now LiveData<NetworkState> will be called every time you access networkState variable.
-    // so do not need to implement setter and getter
+        get() = _networkState
+    // _networkState로 선언된 MutableLiveData를 networkState를 통해 발행한다.
+    // ViewModel에서만 _networkState를 변경할 수 있기 때문에 보안에 좋다.
     //일반적으로 수정가능한 MutableLiveData는 ViewModel 내부에서 사용되고, ViewModel은 수정 불가능한 LiveData로 관찰자에게 노출.
     //setValue() / postValue() 메서드가 호출된 다음에는 관찰자를 트리거하여 UI를 갱신하도록 한다.
 
