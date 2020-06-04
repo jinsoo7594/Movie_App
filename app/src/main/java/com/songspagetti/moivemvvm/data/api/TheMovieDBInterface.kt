@@ -1,6 +1,6 @@
 package com.songspagetti.moivemvvm.data.api
 
-import com.songspagetti.moivemvvm.data.VO.MovieDetails
+import com.songspagetti.moivemvvm.data.vo.MovieDetails
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Path

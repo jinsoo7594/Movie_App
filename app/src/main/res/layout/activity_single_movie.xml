@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".single_moive_details.SingleMovie">
+    tools:context=".ui.single_movie_details.SingleMovie">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -57,7 +57,7 @@
                         android:text="movie"
                         android:textStyle="bold"
                         android:textSize="18sp"
-                        android:id="@+id/Movie_title"/>
+                        android:id="@+id/movie_title"/>
 
                     <TextView
                         android:layout_width="wrap_content"

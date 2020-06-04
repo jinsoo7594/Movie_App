@@ -1,4 +1,4 @@
-package com.songspagetti.moivemvvm.data.VO
+package com.songspagetti.moivemvvm.data.vo
 
 
 import com.google.gson.annotations.SerializedName
@@ -6,7 +6,6 @@ import com.google.gson.annotations.SerializedName
 //Retrofit2는 GSON을 제공하기 때문에 응답바디와 동일하게 data class를 만들어두면 응답 바디에 있는 json을 자동으로 파싱하여 객체로 받을 수 있다.
 data class MovieDetails(
     val budget: Int,
-    val homepage: String,
     val id: Int,
     val overview: String,
     val popularity: Double,

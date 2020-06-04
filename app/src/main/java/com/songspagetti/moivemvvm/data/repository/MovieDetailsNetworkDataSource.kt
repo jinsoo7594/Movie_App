@@ -3,8 +3,8 @@ package com.songspagetti.moivemvvm.data.repository
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.songspagetti.moivemvvm.data.VO.MovieDetails
 import com.songspagetti.moivemvvm.data.api.TheMovieDBInterface
+import com.songspagetti.moivemvvm.data.vo.MovieDetails
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 
@@ -46,13 +46,13 @@ class MovieDetailsNetworkDataSource (private val apiService : TheMovieDBInterfac
                         },
                         {
                             _networkState.postValue(NetworkState.ERROR)
-                            Log.e("MovieDetailsDataSource", it.message)
+                            Log.e("MovieDetailsDataSource1", it.message)
                         }
                     )
             )
         }
         catch (e:Exception){
-            Log.e("MovieDetailsDataSource", e.message)
+            Log.e("MovieDetailsDataSource2", e.message)
         }
 
 

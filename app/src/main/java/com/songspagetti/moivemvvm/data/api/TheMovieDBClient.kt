@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
 const val API_KEY = "801da95f4fd4406b2eaa668892f32971"
-const val BASE_URL = "https://developers.themoviedb.org/3/"
+const val BASE_URL = "https://api.themoviedb.org/3/"
 // POSETER_BASE_URL + "poster_path" => image url  레트로핏에는 base URL 이 필요하다.
 const val POSTER_BASE_URL = "https://image.tmdb.org/t/p/w342/"
 
