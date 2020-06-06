@@ -14,6 +14,9 @@ import io.reactivex.schedulers.Schedulers
 //CompositeDisposable : RxJava component we can use to dispose our API calls, so when we want to dispose a RxJava-thread, we can use CompositeDisposable.
 class MovieDetailsNetworkDataSource (private val apiService : TheMovieDBInterface, private val compositeDisposable: CompositeDisposable) {
     //undercore means it is private
+    //Kotlin's property(val/var) is like Java's field + getter/setter method
+    // but private val/var do not generate getter/setter so same as field
+    // 프로퍼티는 기본적으로 자바의 private 성질을 갖는데 private 이 붙으면 getter/setter을 생성하지 않는다.
     private val _networkState = MutableLiveData<NetworkState>()
     val networkState: LiveData<NetworkState>
         get() = _networkState
@@ -39,7 +42,7 @@ class MovieDetailsNetworkDataSource (private val apiService : TheMovieDBInterfac
             compositeDisposable.add(
                 apiService.getMovieDetails(movieId) // returns a single observable
                     .subscribeOn(Schedulers.io()) //Schedulers.io() is a thread pool, subscriber are subscribing on Scheduler.io() thread pool to observe the network call
-                    .subscribe( // two parameters, for suceess and trouble
+                    .subscribe( // subscribe(Consumer onNext, Consumer onError) : Disposable
                         {
                             _downloadedMovieDetailResponse.postValue(it)
                             _networkState.postValue(NetworkState.LOADED)

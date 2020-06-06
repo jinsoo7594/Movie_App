@@ -14,7 +14,7 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".ui.single_movie_details.SingleMovie"/>
-        <activity android:name=".ui.MainActivity">
+        <activity android:name=".ui.popular_movie.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
